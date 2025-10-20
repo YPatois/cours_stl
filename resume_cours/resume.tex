@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+\DeclareSIUnit{\nothing}{\relax}
+
+\title{Résumé du cours du 15 octobre 2025}
+\author{Yannick Patois}
+\date{17/10/2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Rappel sur les puissances de nombres relatifs}
+
+Les puissances entières sont un concept fondamental en mathématiques, utilisées pour représenter une multiplication
+répétée d'un nombre par lui-même. Nous nous limitons ici aux exposants entiers relatifs.
+
+\subsection{Puissances positives}
+
+La puissance positive est la forme la plus courante et la plus intuitive des puissances entières. 
+
+\[
+a^n = \underbrace{a \times a \times \dots \times a}_{n}  \text{ fois}
+\]
+
+Où \( n \) est un entier positif.
+\vfill
+\textbf{Exemple :}
+\[
+2^3 = 2 \times 2 \times 2 = 8
+\]
+
+Comme vous le voyez, la puissance positive consiste simplement à multiplier le nombre \( a \) par lui-même \( n \) fois.
+
+\subsection{Puissances négatives}
+
+Les puissances négatives sont définies comme l'inverse de la puissance positive correspondante.
+
+\[
+a^{-n} = \frac{1}{a^n}
+\]
+\vfill
+\textbf{Exemple :}
+\[
+2^{-2} = \frac{1}{2^2} = \frac{1}{4}
+\]
+
+Ici, \( 2^{-2} \) est l'inverse de \( 2^2 \), ce qui donne \( \frac{1}{4} \).
+
+\subsection{Puissances à l'exposant zéro}
+
+Un cas particulier est celui où l'exposant est zéro. Pour tout nombre non nul, on a :
+
+\[
+a^0 = 1
+\]
+
+\textbf{Explication :}
+Cette règle peut sembler arbitraire au premier abord, mais elle est nécessaire pour maintenir
+la cohérence des opérations mathématiques.
+
+\section{Puissances de 10 entières}
+
+Les puissances de 10 sont particulièrement importantes en mathématiques et en sciences,
+notamment pour exprimer des nombres très grands ou très petits.
+
+\subsection{Puissances positives de 10}
+
+ Une puissance positive de 10 s'écrit sous la forme \( 10^n \), où \( n \) est un entier positif. Chaque augmentation de l'exposant correspond à l'ajout d'un zéro supplémentaire après le 1.
+
+ \[
+\begin{aligned}
+10^0 &= &0 \\
+10^1 &= &10 \\
+10^2 &= &100 \\
+10^3 &= &1000 \\
+&\vdots
+\end{aligned}
+\]
+\vfill
+\textbf{Exemples :}
+\begin{align*}
+10^4 &= 10000 \quad (\text{4 zéros}) \\
+10^5 &= 100000 \quad (\text{5 zéros}) \\
+\end{align*}
+
+\subsection{Puissances négatives de 10}
+
+ Une puissance négative de 10 s'écrit sous la forme \( 10^{-n} \), où \( n \) est un entier positif. Elle représente une valeur fractionnaire avec \( n-1 \) zéros après la virgule décimale, suivie d'un 1.
+
+\begin{align*}
+10^{0} &= 0 \\
+10^{-1} &= 0,1 \\
+10^{-2} &= 0,01 \\
+10^{-3} &= 0,001 \\
+&\vdots
+\end{align*}
+\vfill
+\textbf{Exemples :}
+\begin{align*}
+10^{-4} &= 0,0001 \quad (\text{3 zéros après la virgule}) \\
+10^{-5} &= 0,00001 \quad (\text{4 zéros après la virgule}) \\
+\end{align*}
+
+\section{Préfixes multiplieurs SI}
+
+Les préfixes multiplieurs SI sont utilisés pour exprimer des puissances de 10 de manière concise.
+Ils permettent de représenter des nombres très grands ou très petits en associant 
+un symbole à une puissance de 10 spécifique.
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+Symbole            & Nom              & Valeur multiplicative\\
+\hline
+\si{\kilo\nothing} & kilo             & \(10^3\) \\
+\si{\mega\nothing} & mega             & \(10^6\) \\
+\si{\giga\nothing} & giga             & \(10^9\) \\
+\si{\tera\nothing} & tera             & \(10^{12}\) \\
+\hline
+\si{\milli\nothing} & milli            & \(10^{-3}\) \\
+\si{\micro\nothing} & micro            & \(10^{-6}\) \\
+\si{\nano\nothing}  & nano             & \(10^{-9}\) \\
+\si{\pico\nothing}  & pico             & \(10^{-12}\) \\
+\hline
+\end{tabular}
+ \end{center}
+
+\textbf{Exemples :}
+\begin{itemize}
+    \item \SI{1}{\kilo\metre} = \(10^3\) mètres = 1000 mètres
+    \item \SI{1}{\micro\second} = \(10^{-6}\) secondes
+    \item \SI{1}{\giga\hertz} = \(10^9\) hertzs
+\end{itemize}
+
+Ce système de préfixes est particulièrement utile pour exprimer des grandeurs physiques de manière concise et lisible.
+
+\end{document}
