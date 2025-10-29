@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{chemfig}
+\usepackage[version=4]{mhchem}
 
 \begin{document}
 
@@ -18,6 +19,16 @@ Propane-1-ol
 Propane-1-ol
 \end{center}
 \vfill
+
+vfill
+\begin{center}
+\chemfig[bond join=true,angle increment=30]{
+    H>[-1]C(-[-3]H)(<:[4]H)-[1]C(<[2]H)(<:[4]H)-[-1]C(-[-3]H)(<[1]H)(<:[2]OH)
+}\\
+Propane-1-ol
+\end{center}
+\vfill
+
 
 \begin{center}
 \chemfig{
@@ -41,12 +52,57 @@ Méthoxyéthane (méthyl ethyl éther)
 \end{center}
 \vfill
 
-\vfill
 \begin{center}
 \chemfig{[:-30]-[:30]-[:-30]O-[:30]}\\
 Méthoxyéthane
 \end{center}
 \vfill
 
+\begin{center}
+\chemfig[angle increment=30]{
+    C^{\color{red}*}(-[3]CH3)(-[7]Cl)(-[-1]H)(-[-2]OH)
+}\\
+Chlorométhanol
+\end{center}
+\vfill
+
+\begin{center}
+\ce{Cl-CH2OH}\\
+Chlorométhanol
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig{
+ OH-[:270,,1](=[:330]O)-[:210](^{\color{red}*}-[:150]^{\color{red}*}(-[:210]Br)-[:90])-[:270]=^[:210]-[:270]%
+=^[:330]-[:30]=^[:90](-[:150])
+}\\
+Acide 1-bromo-3-méthyl-2-phénylbutanoïque
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig{
+    OH-[:150,,1](=[:90]O)-[:210](<:[:150,,,2]H_2N)-[:270]
+}\\
+Acide 2-aminopropanoïque (alanine)
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[angle increment=30]{
+    C^{\color{red}*}(-[3]COOH)(-[7]H)(-[-1]CH_3)(-[-2]NH_2)
+}\\
+(R) Acide 2-aminopropanoïque (alanine)
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[angle increment=30]{
+    C^{\color{red}*}(-[3]COOH)(-[7]CH_3)(-[-1]H)(-[-2]NH_2)
+}\\
+(S) Acide 2-aminopropanoïque (alanine)
+\end{center}
+\vfill
 
 \end{document}
