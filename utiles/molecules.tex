@@ -59,8 +59,8 @@ Méthoxyéthane
 \vfill
 
 \begin{center}
-\chemfig[angle increment=30]{
-    C^{\color{red}*}(-[3]CH3)(-[7]Cl)(-[-1]H)(-[-2]OH)
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:90]R)(-[:-150]Cl)(<[:-60]OH)(<:[:-30]H)
 }\\
 Chlorométhanol
 \end{center}
@@ -89,19 +89,64 @@ Acide 2-aminopropanoïque (alanine)
 \end{center}
 \vfill
 
+
 \begin{center}
-\chemfig[angle increment=30]{
-    C^{\color{red}*}(-[3]COOH)(-[7]H)(-[-1]CH_3)(-[-2]NH_2)
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:90]R)(-[:-150]S)(<[:-60]T)(<:[:-30]U)
 }\\
-(R) Acide 2-aminopropanoïque (alanine)
+Template 1
 \end{center}
 \vfill
 
 \begin{center}
-\chemfig[angle increment=30]{
-    C^{\color{red}*}(-[3]COOH)(-[7]CH_3)(-[-1]H)(-[-2]NH_2)
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:90]R)(-[:-30]S)(<:[:-150]T)(<[:-120]U)
 }\\
-(S) Acide 2-aminopropanoïque (alanine)
+Template 2
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:-90]R)(-[:150]S)(<:[:60]T)(<[:30]U)
+}\\
+Template 3
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:-90]R)(-[:30]S)(<[:150]T)(<:[:120]U)
+}\\
+Template 4
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:90]COOH)(-[:-150]H)(<[:-60]NH_2)(<:[:-30]CH_3)
+}\\
+(R) Acide\\
+2-aminopropanoïque\\
+(r-alanine)
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:90]COOH)(-[:-30]H)(<:[:-150]CH_3)(<[:-120]NH_2)
+}\\
+(S) Acide\\
+2-aminopropanoïque\\
+(s-alanine)
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:-90]R)(-[:150]CH_2OH)(<:[:60]T)(<[:30]U)
+}\\
+Thréose
 \end{center}
 \vfill
 
