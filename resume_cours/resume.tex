@@ -60,7 +60,6 @@ Un cas particulier est celui où l'exposant est zéro. Pour tout nombre non nul,
 a^0 = 1
 \]
 
-\textbf{Explication :}
 Cette règle peut sembler arbitraire au premier abord, mais elle est nécessaire pour maintenir
 la cohérence des opérations mathématiques.
 
@@ -83,11 +82,6 @@ notamment pour exprimer des nombres très grands ou très petits.
 \end{aligned}
 \]
 \vfill
-\textbf{Exemples :}
-\begin{align*}
-10^4 &= 10000 \quad (\text{4 zéros}) \\
-10^5 &= 100000 \quad (\text{5 zéros}) \\
-\end{align*}
 
 \subsection{Puissances négatives de 10}
 
@@ -101,11 +95,6 @@ notamment pour exprimer des nombres très grands ou très petits.
 &\vdots
 \end{align*}
 \vfill
-\textbf{Exemples :}
-\begin{align*}
-10^{-4} &= 0,0001 \quad (\text{3 zéros après la virgule}) \\
-10^{-5} &= 0,00001 \quad (\text{4 zéros après la virgule}) \\
-\end{align*}
 
 \section{Préfixes multiplieurs SI}
 
@@ -130,14 +119,14 @@ Symbole            & Nom              & Valeur multiplicative\\
 \hline
 \end{tabular}
  \end{center}
-
+\smallskip
 \textbf{Exemples :}
 \begin{itemize}
     \item \SI{1}{\kilo\metre} = \(10^3\) mètres = 1000 mètres
     \item \SI{1}{\micro\second} = \(10^{-6}\) secondes
     \item \SI{1}{\giga\hertz} = \(10^9\) hertzs
 \end{itemize}
-
+\smallskip
 Ce système de préfixes est particulièrement utile pour exprimer des grandeurs physiques de manière concise et lisible.
 
 \section{Le Nombre d'Avogadro}
@@ -148,8 +137,8 @@ relier les quantités macroscopiques aux quantités microscopiques.
 
 \subsection{Définition}
 
-Le nombre d'Avogadro est historiquement défini comme le nombre d'entités (atomes, molécules, ions, etc.) 
-ontenus dans une mole d'une substance. Sa valeur était approximativement de :
+Le nombre d'Avogadro est historiquement défini comme le nombre d'atomes de \ce{^12_6C} dans \qty{12}{g} de matière.
+Sa valeur était approximativement de:
 \[
 N_A = 6,022 \times 10^{23} \text{ entités/mol}
 \]
@@ -171,32 +160,37 @@ une ou deux lettres. Ce symbole est souvent accompagné de deux nombres : le num
 
 \ce{^A_ZX}
 
-où :
-- \(Z\) est le numéro atomique, qui correspond au nombre de protons dans le noyau de l'atome.
-- \(A\) est le numéro de masse, qui correspond au nombre total de protons et de neutrons (les nucléons) dans le noyau.
-- \(X\) est le symbole de l'élément.
-\vfill
+Avec :
+\begin{itemize}
+    \item \(Z\) est le numéro atomique, qui correspond au nombre de protons dans le noyau de l'atome.
+    \item \(A\) est le numéro de masse, qui correspond au nombre total de protons et de neutrons (les nucléons) dans le noyau.
+    \item \(X\) est le symbole de l'élément.
+\end{itemize}
+\smallskip
 \textbf{Exemple}
 Pour l'élément carbone :
 \[
 ^{12}_{6}C
 \]
-- \(Z = 6\) : il y a 6 protons dans le noyau.
-- \(A = 12\) : il y a 6 neutrons (12 - 6 = 6).
-- \(X = C\) : symbole du carbone.
+\begin{itemize}
+    \item \(Z = 6\) : il y a 6 protons dans le noyau.
+    \item \(A = 12\) : il y a 6 neutrons (12 - 6 = 6).
+    \item \(X = C\) : symbole du carbone.
+\end{itemize}
 
 \section{Notation des isotopes}
 
 \textbf{Definition} : Les isotopes sont des atomes d'un élément chimique ayant des numéros de masse (\(A\)) différents
 mais des numéros atomiques (\(Z\)) identiques, en raison d'un nombre variable de neutrons.
-
-\vfill
+\smallskip
 \textbf{Exemples}
-Pour l'élément hydrogène :
-- Le "protium" (isotope le plus commun, généralement juste appelé "hydrogène" ou "proton") : \ce{^1_1H}
-- Le deutérium : \ce{^2_1H}
-- Le tritium : \ce{^3_1H}
-
+Pour l'élément hydrogène~:
+\begin{itemize}
+    \item Le "protium" (isotope le plus commun, généralement juste appelé "hydrogène" ou "proton") : \ce{^1_1H}
+    \item Le deutérium : \ce{^2_1H}
+    \item Le tritium : \ce{^3_1H}
+\end{itemize}
+\smallskip
 Ces isotopes ont tous le même symbole (\(H\)) et le même numéro atomique (\(Z = 1\)),
 mais des numéros de masse différents (\(A = 1, 2, 3\)).
 
