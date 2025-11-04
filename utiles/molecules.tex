@@ -132,7 +132,7 @@ Template 5
 
 \begin{center}
 \chemfig[bond join=true]{
-    C^{\color{red}*}(-[:0]R)(-[:120]S)(<[:-120]T)(<:[:-150]U)
+    C^{\color{red}*}(-[:0]R)(-[:150]S)(<[:-120]T)(<:[:-150]U)
 }\\
 Template 6
 \end{center}
@@ -141,7 +141,7 @@ Template 6
 
 \begin{center}
 \chemfig[bond join=true]{
-    C^{\color{red}*}(-[:90]COOH)(-[:-150]H)(<[:-60]NH_2)(<:[:-30]CH_3)
+    C^{\color{red}*}(-[:90]COOH)(-[:-140]H)(<[:-60]NH_2)(<:[:-30]CH_3)
 }\\
 (R) Acide\\
 2-aminopropanoïque\\
@@ -220,5 +220,51 @@ acide (Z)-pen-2-ène-1,5-dioïque
 \end{center}
 \vfill
 
+\begin{center}
+\chemfig[bond join=true]{
+    C^{\color{red}*}(-[:-180]R)(-[:30]S)(<[:-60]T)(<:[:-30]U)
+}\\
+Template 5
+\end{center}
+\vfill
 
+\begin{center}
+\chemfig[bond join=true]{
+    \chembelow{\chemabove{}{\color{red}3}}{\color{blue}R}%
+    (-[:0]{\chembelow{\chemabove{}{\color{red}2}}{\color{blue}R}}(-[:30]OH)(<[:-60]COOH)(<:[:-30]H))%
+    (-[:140]OH)(<[:-120]CH_3)(<:[:-150]H)
+}\\
+Acide (R,R)2,3-dihydroxybutanoïque
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    \chembelow{\chemabove{}{\color{red}2}}{\color{blue}S}%
+    (-[:0]{\chembelow{\chemabove{}{\color{red}3}}{\color{blue}S}}(-[:30]OH)(<[:-60]CH_3)(<:[:-30]H))%
+    (-[:140]OH)(<[:-120]COOH)(<:[:-150]H)
+}\\
+Acide (S,S)2,3-dihydroxybutanoïque
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    \chembelow{\chemabove{}{\color{red}3}}{\color{blue}S}%
+    (-[:0]{\chembelow{\chemabove{}{\color{red}2}}{\color{blue}R}}(-[:30]OH)(<[:-60]COOH)(<:[:-30]H))%
+    (-[:140]CH_3)(<[:-120]OH)(<:[:-150]H)
+}\\
+Acide (R,S)2,3-dihydroxybutanoïque
+\end{center}
+\vfill
+
+\begin{center}
+\chemfig[bond join=true]{
+    \chembelow{\chemabove{}{\color{red}2}}{\color{blue}S}%
+    (-[:0]{\chembelow{\chemabove{}{\color{red}3}}{\color{blue}R}}(-[:30]CH_3)(<[:-60]OH)(<:[:-30]H))%
+    (-[:140]OH)(<[:-120]COOH)(<:[:-150]H)
+}\\
+Acide (S,R)2,3-dihydroxybutanoïque
+\end{center}
+\vfill
 \end{document}
