@@ -3,6 +3,7 @@
 \usepackage[french]{babel}
 \usepackage{amsmath}
 \usepackage{siunitx}
+\usepackage[version=4]{mhchem}
 
 \DeclareSIUnit{\nothing}{\relax}
 
@@ -168,9 +169,7 @@ Dans le tableau périodique, chaque élément chimique est représenté par un s
 une ou deux lettres. Ce symbole est souvent accompagné de deux nombres : le numéro atomique 
 (\(Z\)) et le numéro de masse (\(A\)). Ces informations sont représentées sous la forme :
 
-\[
-^{A}_{Z}X
-\]
+\ce{^A_ZX}
 
 où :
 - \(Z\) est le numéro atomique, qui correspond au nombre de protons dans le noyau de l'atome.
@@ -194,9 +193,9 @@ mais des numéros atomiques (\(Z\)) identiques, en raison d'un nombre variable d
 \vfill
 \textbf{Exemples}
 Pour l'élément hydrogène :
-- Le "protium" (isotope le plus commun, généralement juste appelé "hydrogène" ou "proton") : \({}^{1}_{1}H\)
-- Le deutérium : \({}^{2}_{1}H\)
-- Le tritium : \({}^{3}_{1}H\)
+- Le "protium" (isotope le plus commun, généralement juste appelé "hydrogène" ou "proton") : \ce{^1_1H}
+- Le deutérium : \ce{^2_1H}
+- Le tritium : \ce{^3_1H}
 
 Ces isotopes ont tous le même symbole (\(H\)) et le même numéro atomique (\(Z = 1\)),
 mais des numéros de masse différents (\(A = 1, 2, 3\)).
