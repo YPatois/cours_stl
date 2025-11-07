@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+
+\title{Correction du TP1}
+\author{Yannick Patois}
+\date{05/11/2025}
+
+\begin{document}
+
+\section*{II/ Géométrie autour d’un atome tétragonal}
+
+Un atome est tétragonal s’il possède 4 atomes voisins avec lesquels il forme des liaisons covalentes.  
+Étude de la molécule de méthane de formule brute \ce{CH4}.
+
+\subsection*{1. Construire le modèle moléculaire éclaté}
+
+Le modèle moléculaire éclaté du méthane consiste en un atome central de carbone \ce{C} entouré de 
+quatre atomes d'hydrogène \ce{H}. Dans ce modèle, chaque liaison covalente est représentée par une 
+connexion entre les nuages électroniques de deux atomes.
+
+\subsection*{2. Quelle est la géométrie autour de l’atome de carbone ?}
+
+La géométrie autour de l'atome de carbone dans le méthane est \textbf{tétraédrique}. 
+Les quatre liaisons \ce{C-H} s'organisent dans l'espace pour former une structure tétraédrique, où chaque angle 
+entre les liaisons est d’environ 109,5°.
+
+\subsection*{3. Déterminer son schéma de Lewis}
+
+Le schéma de Lewis du méthane est représenté comme suit~:
+
+\begin{itemize}
+\item Un atome de carbone central.
+\item Quatre atomes d'hydrogène autour du carbone.
+\item Chaque liaison \ce{C-H} est une liaison covalente simple, avec une paire d'électrons partagée entre 
+le carbone et chaque hydrogène.
+\end{itemize}
+
+\chemfig{C(-[0]H)(-[2]H)(-[4]H)(-[6]H)}
+
+\subsection*{4. Comment peut-on expliquer cette géométrie ?}
+
+La géométrie tétraédrique du méthane s'explique par la répulsion entre les paires d'électrons dans 
+la théorie VSEPR (Valence Shell Electron Pair Repulsion). Le carbone possède quatre paires 
+d'électrons de liaison, toutes identiques et sans paire d'électrons non liantes. 
+Ces paires d'électrons se repoussent mutuellement et s'organisent dans l'espace pour minimiser cette répulsion, 
+ce qui conduit à une disposition tétraédrique.
+
+\subsection*{5. Déterminer la représentation de Cram de cette molécule}
+
+La représentation de Cram du méthane montre le carbone central avec ses quatre liaisons simples vers 
+les atomes d'hydrogène. Étant donné que toutes les liaisons sont identiques et qu'il n'y a 
+pas de stéréoisomérie, la structure est représentée de manière symétrique.
+
+\chemfig{
+    C(-[:90]H)(-[:-150]H)(<[:-60]H)(<:[:-30]H)
+}
+
+\subsection*{Conclusion}
+
+Le méthane \ce{CH4} est une molécule tétraédrique où le carbone central est lié à quatre atomes 
+d'hydrogène par des liaisons covalentes simples. Cette géométrie est expliquée par la théorie VSEPR, 
+et les représentations de Lewis et de Cram mettent en évidence cette structure symétrique.
+
+\section*{III/ Géométrie autour d’un atome trigonal}
+
+Un atome est trigonal s’il possède 3 atomes voisins avec lesquels il forme des liaisons covalentes.
+Étude de la molécule d'ammoniac de formule brute \ce{NH3}.
+
+\subsection*{1. Construire le modèle moléculaire éclaté}
+
+Le modèle moléculaire éclaté de l'ammoniac se compose d'un atome central d'azote entouré de trois atomes
+ d'hydrogène. Chaque liaison covalente est représentée par une connexion entre les nuages 
+électroniques de l'azote et des hydrogènes.
+
+\subsection*{2. Quelle est la géométrie autour de l’atome d’azote ?}
+
+La géométrie autour de l'atome d'azote dans l'ammoniac est \textbf{trigonal pyramidale}. 
+Les trois liaisons \ce{N-H} et la paire d'électrons libre s'organisent selon une géométrie tétraédrique, 
+ce qui conduit à une forme moléculaire trigonal pyramidale.
+
+\subsection*{3. Déterminer son schéma de Lewis}
+
+Le schéma de Lewis de l'ammoniac est représenté comme suit~:
+
+\begin{itemize}
+    \item Un atome central d'azote.
+    \item Trois atomes d'hydrogène liés à l'azote par des liaisons covalentes simples.
+    \item Une paire d'électrons libre sur l'azote.
+\end{itemize}
+
+La représentation en schéma de Lewis est~:
+
+\chemfig{
+    \charge{90=\|}{N}(-[0]H)(-[4]H)(-[6]H)
+}
+
+\subsection*{4. Comment expliquer cette géométrie ?}
+
+Selon la théorie VSEPR (Valence Shell Electron Pair Repulsion), les paires électroniques (liantes et non liantes) s'éloignent pour minimiser les répulsions. Dans le cas de l'ammoniac, il y a 
+quatre régions électroniques autour de l'azote~: trois liaisons \ce{N-H} et une paire d'électrons libre. Ces régions adoptent une géométrie tétraédrique. Cependant, comme seule la paire 
+d'électrons libre ne contribue pas à la position des atomes, la forme moléculaire résultante est trigonal pyramidale.
+
+\subsection*{5. Déterminer la représentation de Cram de cette molécule}
+
+La représentation de Cram met en évidence la structure tridimensionnelle de l'ammoniac. Elle montre l'atome d'azote central avec les trois atomes d'hydrogène disposés dans un plan et la paire 
+d'électrons libre dirigée vers le haut.
+
+\chemfig{
+    N(-[:90]H)(-[:-150]H)(<[:-60]H)
+}
+
+\subsection*{Conclusion}
+
+L'ammoniac \ce{NH3} est une molécule à géométrie trigonal pyramidale. L'azote central est lié à trois atomes d'hydrogène par des liaisons covalentes simples, et la présence d'une paire 
+d'électrons libre influe sur la forme tridimensionnelle de la molécule, expliquée par la théorie VSEPR. Les schémas de Lewis et de Cram illustrent clairement cette structure.
+
+
+\end{document}
