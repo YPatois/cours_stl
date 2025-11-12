@@ -1,12 +1,14 @@
-TEXFILE = tp1
+TEXFILES = tp1.pdf exo1.pdf
 
 .PHONY: all clean view
 
-all:
-	pdflatex $(TEXFILE).tex
+all: $(TEXFILES)
+
+%.pdf: %.tex
+	pdflatex $<
 
 clean:
 	rm -f *.aux *.log *.pdf
 
 view: all
-	xdg-open $(TEXFILE).pdf
+	xdg-open $(TEXFILES).pdf
