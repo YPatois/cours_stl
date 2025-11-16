@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\usepackage{mol2chemfig}
+\usepackage{tabularx}
+
+\title{Correction du TP2}
+\author{Yannick Patois}
+\date{12/11/2025}
+
+\begin{document}
+\maketitle
+
+\section*{ACTIVITÉ 1 : des représentations pour comprendre la notion de chiralité}
+
+\subsection*{1.Pour chacune des molécules suivantes, donner la représentation de Cram et indiquer si la molécule est chirale.}
+
+La première molécule représentée est un 1-chloropropan-1,2-ol \ce{CHClOH-CH2OH-CH3}.
+Une représentation de Cram de cette molécule est~:
+
+\vfill
+\begin{center}
+    \chemfig[bond join=true]{
+        {\color{red}*}(-[:0]{\color{red}*}(-[:-30]CH3)(<:[:60]H)(<[:30]OH))%
+        (-[:150]Cl)(<[:-120]OH)(<:[:-150]H)
+    }\\
+    1-chloropropan-1,2-ol \ce{CHClOH-CH2OH-CH3}.
+\end{center}
+\vfill
+
+La seconce molécule représentée est un 1,2-dichloropropan-1,2-ol \ce{CHClOH-CH2ClOH-CH3}.
+Une représentation de Cram de cette molécule est~:
+
+\vfill
+\begin{center}
+    \chemfig[bond join=true]{
+        {\color{red}*}(-[:0]{\color{red}*}(-[:-30]CH3)(<:[:60]Cl)(<[:30]OH))%
+        (-[:150]Cl)(<[:-120]OH)(<:[:-150]H)
+    }\\
+    1,2-dichloropropan-1,2-ol \ce{CHClOH-CH2ClOH-CH3}.
+\end{center}
+\vfill
+
+\subsection*{Pour chacune des molécules suivantes, construire la molécule à l’aide des modèles moléculaires et compléter le
+tableau ci-dessous.}
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{|X|c|c|c|X|}
+    \hline
+    \textbf{Molécule} & \textbf{Groupe} & \textbf{Famille} & \textbf{Chirale ?} & \textbf{Justification} \\
+    \hline
+    3-chlorobutan-2-ol                 & Alcool    & Alcool             & Oui & Deux carbones asymétriques \\
+    \hline
+    Acide 3-hydroxy-2-methylbutanoique & Carboxyle & Acide carboxylique & Oui & Deux carbones asymétriques \\
+    \hline
+    2-methylbutanal                    & Carbonyle & Aldhéyde           & Oui & Un carbone asymétrique \\
+    \hline
+    Ethanoate de propyle               & (Ester)   & (Ester)            & Non & Deux hydrogènes \\
+    \hline
+    \end{tabularx}
+\end{table}
+
+\end{document}

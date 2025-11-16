@@ -1,4 +1,4 @@
-TEXFILES = tp1.pdf exo1.pdf
+TEXFILES = tp1.pdf tp2.pdf exo1.pdf
 
 .PHONY: all clean view
 
