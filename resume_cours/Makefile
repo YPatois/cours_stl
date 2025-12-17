@@ -1,10 +1,14 @@
-TEXFILE = resume
+TEXFILES = 01_quelques_bases 03_acide_base
 
-all:
-	pdflatex $(TEXFILE).tex
+all: $(TEXFILES)
+
+$(TEXFILES):
+	pdflatex $@.tex
 
 clean:
 	rm -f *.aux *.log *.pdf
 
 view: all
-	xdg-open $(TEXFILE).pdf
+	@for file in $(TEXFILES); do \
+	    xdg-open $$file.pdf; \
+	done
