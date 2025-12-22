@@ -1,4 +1,4 @@
-TEXFILES = 01_quelques_bases 03_acide_base
+TEXFILES = 01_quelques_bases 02_stereochimie 03_acide_base
 
 all: $(TEXFILES)
 
