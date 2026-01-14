@@ -4,8 +4,6 @@ TEXFILES := 01_quelques_bases.tex \
 			04_stereochimie.tex \
 			05_acide_base.tex
 
-02_lewis_vsepr.pdf: lewis.tex
-
 all: $(TEXFILES:.tex=.pdf)
 
 %.pdf: %.tex $(DEPS)
