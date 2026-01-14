@@ -11,4 +11,6 @@ clean:
 	rm -f *.aux *.log *.pdf
 
 view: all
-	xdg-open $(TEXFILES:.tex=.pdf)
+	@for file in $(TEXFILES); do \
+	    xdg-open $$file.pdf; \
+	done
