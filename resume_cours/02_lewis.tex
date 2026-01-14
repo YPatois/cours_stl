@@ -12,7 +12,7 @@
 \DeclareSIUnit{\nothing}{\relax}
 \graphicspath{ {./images/} }
 
-\title{Schéma de Lewis et Théorie VSEPR}
+\title{Schéma de Lewis}
 \author{Yannick Patois}
 \date{14/01/2026}
 
@@ -20,26 +20,70 @@
 
 \maketitle
 
-\input{lewis.tex}
+\section{Schéma de Lewis}
+\subsection{Introduction}
+Les schémas de Lewis représentent les électrons de valence des atomes et des molécules.
+Ils permettent de visualiser les liaisons covalentes, les paires libres et les charges formelles,
+ce qui est essentiel pour comprendre la réactivité chimique et la géométrie moléculaire.
 
-\section{Théorie VSEPR et Géométrie Moléculaire}
-\subsection{Principe de la Théorie VSEPR}
-La théorie VSEPR (Valence Shell Electron Pair Repulsion) permet de prédire la 
-géométrie des molécules en minimisant les répulsions entre les paires d'électrons de valence.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{lewis.png}
+    \caption{Schéma de Lewis}
+    \label{fig:lewis}
+\end{figure}
 
-\subsection{Géométries Courantes}
-\begin{center}
-\begin{tabular}{>{\bfseries}l l l}
-\toprule
-Géométrie & Description & Exemple \\
-\midrule
-Linéaire & Angle de $180^\circ$ & \ce{CO2} \\
-Trigonale plane & Angle de $120^\circ$ & \ce{BF3} \\
-Tétraédrique & Angle de $109.5^\circ$ & \ce{CH4} \\
-\bottomrule
-\end{tabular}
-\end{center}
+\subsection{Règles de Construction}
+Pour dessiner un schéma de Lewis~:
+\begin{enumerate}
+    \item Déterminer le nombre total d'électrons de valence de tous les atomes dans la molécule.
+    \item Ajouter ou retirer des électrons si la molécule est un ion.
+    \item Placer les atomes en respectant leur connectivité (l'atome le moins électronégatif
+    est généralement central).
+    \item Distribuer les électrons pour former des liaisons simples entre les atomes.
+    \item Compléter les octets (ou duets pour l'hydrogène) en ajoutant des paires libres ou
+    des liaisons multiples si nécessaire.
+    \item Vérifier les charges formelles et les indiquer si besoin.
+\end{enumerate}
 
+\subsection{Exemples de Schémas de Lewis}
+\subsubsection{Molécules Simples}
+\begin{itemize}
+    \item \textbf{Eau (\ch{H2O})}~:
+    L'oxygène (6 électrons de valence) forme deux liaisons simples avec deux hydrogènes
+    (1 électron chacun). Il reste deux paires libres sur l'oxygène.
+    \begin{center}
+    \chemfig{H-[:52.24]\charge{45=\:,135=\:}{O}-[::-104.48]H}
+    \end{center}
+
+    \item \textbf{Dioxyde de carbone (\ch{CO2})}~:
+    Le carbone (4 électrons de valence) forme deux doubles liaisons avec deux oxygènes
+    (6 électrons chacun). Aucune paire libre sur le carbone.
+    \begin{center}
+        \chemfig{
+        \charge{135=\:,225=\:}{O}
+        =C
+        =\charge{315=\:,45=\:}{O}
+        }
+    \end{center}
+
+    \item \textbf{Ammoniac (\ch{NH3})}~:
+    L'azote (5 électrons de valence) forme trois liaisons simples avec trois hydrogènes, 
+    laissant une paire libre.
+    \vspace{0.5cm}
+    %\chemfig{\charge{-90=\:}{N}(-[:180]\charge{135=\:,225=\:}{H})(-[:90]\charge{45=\:,135=\:}{H})-[:0]\charge{315=\:,45=\:}{H}}
+   \begin{center}
+        \chemfig{\charge{-90=\:}{N}(-[:180]H)(-[:90]H)-[:0]H}
+    \end{center}
+\end{itemize}
+
+\subsection{Application à la Théorie VSEPR}
+Les schémas de Lewis sont une étape préliminaire à l'application de la théorie VSEPR. Ils permettent de~:
+\begin{itemize}
+    \item Identifier le nombre de paires liantes et non liantes autour de l'atome central.
+    \item Déterminer la géométrie électronique et moléculaire.
+    \item Prédire les angles de liaison et la polarité des molécules.
+\end{itemize}
 
 \end{document}
 
