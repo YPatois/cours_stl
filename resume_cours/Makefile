@@ -1,4 +1,9 @@
-TEXFILES := 01_quelques_bases.tex 02_lewis_vsepr.tex 02_stereochimie.tex 03_acide_base.tex
+TEXFILES := 01_quelques_bases.tex \
+			02_lewis_vsepr.tex \
+			03_stereochimie.tex \
+			04_acide_base.tex
+
+02_lewis_vsepr.pdf: lewis.tex
 
 all: $(TEXFILES:.tex=.pdf)
 
