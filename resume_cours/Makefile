@@ -1,6 +1,4 @@
-TEXFILES := fiche_puissance_si_elements.tex fiche_base_chimie_lewis_vsepr.tex
-
-fiche_base_chimie_lewis_vsepr.pdf: lewis.tex
+TEXFILES := 01_quelques_bases.tex 02_lewis_vsepr.tex
 
 all: $(TEXFILES:.tex=.pdf)
 
