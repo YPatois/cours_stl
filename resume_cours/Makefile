@@ -1,7 +1,8 @@
 TEXFILES := 01_quelques_bases.tex \
-			02_lewis_vsepr.tex \
-			03_stereochimie.tex \
-			04_acide_base.tex
+			02_lewis.tex \
+			03_vsepr.tex \
+			04_stereochimie.tex \
+			05_acide_base.tex
 
 02_lewis_vsepr.pdf: lewis.tex
 
