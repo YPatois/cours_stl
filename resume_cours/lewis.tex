@@ -1,0 +1,84 @@
+\section{Schéma de Lewis}
+\subsection{Introduction}
+Les schémas de Lewis représentent les électrons de valence des atomes et des molécules.
+Ils permettent de visualiser les liaisons covalentes, les paires libres et les charges formelles,
+ce qui est essentiel pour comprendre la réactivité chimique et la géométrie moléculaire.
+
+\subsection{Règles de Construction}
+Pour dessiner un schéma de Lewis~:
+\begin{enumerate}
+    \item Déterminer le nombre total d'électrons de valence de tous les atomes dans la molécule.
+    \item Ajouter ou retirer des électrons si la molécule est un ion.
+    \item Placer les atomes en respectant leur connectivité (l'atome le moins électronégatif
+    est généralement central).
+    \item Distribuer les électrons pour former des liaisons simples entre les atomes.
+    \item Compléter les octets (ou duets pour l'hydrogène) en ajoutant des paires libres ou
+    des liaisons multiples si nécessaire.
+    \item Vérifier les charges formelles et les indiquer si besoin.
+\end{enumerate}
+
+\subsection{Exemples de Schémas de Lewis}
+\subsubsection{Molécules Simples}
+\begin{itemize}
+    \item \textbf{Eau (\ch{H2O})}~:
+    L'oxygène (6 électrons de valence) forme deux liaisons simples avec deux hydrogènes
+    (1 électron chacun). Il reste deux paires libres sur l'oxygène.
+    \begin{center}
+    \chemfig{H-[:52.24]\charge{45=\:,135=\:}{O}-[::-104.48]H}
+    \end{center}
+
+    \item \textbf{Dioxyde de carbone (\ch{CO2})}~:
+    Le carbone (4 électrons de valence) forme deux doubles liaisons avec deux oxygènes
+    (6 électrons chacun). Aucune paire libre sur le carbone.
+    \begin{center}
+        \chemfig{
+        \charge{135=\:,225=\:}{O}
+        =C
+        =\charge{315=\:,45=\:}{O}
+        }
+    \end{center}
+
+    \item \textbf{Ammoniac (\ch{NH3})}~:
+    L'azote (5 électrons de valence) forme trois liaisons simples avec trois hydrogènes, laissant une paire libre.
+    \begin{center}
+        \chemfig{N(-[:180]\charge{135=\:,225=\:}{H})(-[:90]\charge{270=\:,330=\:}{H3})-[:0]\charge{30=\:,95=\:}{H4}}
+    \end{center}
+\end{itemize}
+
+\subsubsection{Molécules avec Charges Formelles}
+\begin{itemize}
+    \item \textbf{Ion ammonium (\ch{NH4+})}~:
+    L'azote forme quatre liaisons simples avec quatre hydrogènes, ce qui lui donne une charge formelle de +1.
+    \begin{center}
+    \chemfig{@N([:90]\charge{90=\:,150=\:}{H})(-[:150]\charge{30=\:,90=\:}{H})(-[:270]\charge{270=\:,330=\:}{H})-[:30]\charge{30=\:,95=\:}{H}}
+    \end{center}
+
+    \item \textbf{Ion carbonate (\ch{CO3^2-})}~:
+    Le carbone forme trois doubles liaisons avec trois oxygènes, et porte une charge formelle de -2 répartie sur les oxygènes.
+    \begin{center}
+    \chemfig{@O-[:90]C(=[:150]\charge{150=\:,210=\:}{O^-})(=[:270]\charge{270=\:,330=\:}{O^-})=[:30]\charge{30=\:,90=\:}{O^-}}
+    \end{center}
+\end{itemize}
+
+\subsection{Exceptions aux Règles de l'Octet}
+Certaines molécules ne respectent pas la règle de l'octet~:
+\begin{itemize}
+    \item \textbf{Molécules hypovalentes}~: Comme \ch{BeCl2} ou \ch{BF3}, où l'atome central a moins de 8 électrons.
+    \item \textbf{Molécules hypervalentes}~: Comme \ch{PCl5} ou \ch{SF6}, où l'atome central a plus de 8 électrons.
+    \item \textbf{Radicaux libres}~: Comme \ch{NO} ou \ch{ClO2}, où un électron est non apparié.
+\end{itemize}
+
+\subsection{Application à la Théorie VSEPR}
+Les schémas de Lewis sont une étape préliminaire à l'application de la théorie VSEPR. Ils permettent de~:
+\begin{itemize}
+    \item Identifier le nombre de paires liantes et non liantes autour de l'atome central.
+    \item Déterminer la géométrie électronique et moléculaire.
+    \item Prédire les angles de liaison et la polarité des molécules.
+\end{itemize}
+
+\subsection{Exercices d'Application}
+\begin{enumerate}
+    \item Dessinez le schéma de Lewis pour les molécules suivantes~: \ch{SO2}, \ch{SO3}, \ch{PO4^3-}.
+    \item Identifiez les charges formelles dans \ch{HNO3} et \ch{ClO4-}.
+    \item Proposez une géométrie moléculaire pour \ch{SF4} et \ch{XeF2} en utilisant la théorie VSEPR.
+\end{enumerate}
