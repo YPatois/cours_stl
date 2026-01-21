@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{chemfig}
+\usepackage{mol2chemfig}
+\usepackage{float}
+\usepackage{hyperref}
+
+\title{Résumé : Nomenclature des Molécules Organiques}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Nomenclature des Alcanes}
+
+\subsection{Alcanes Linéaires}
+Les alcanes sont des hydrocarbures saturés, c'est-à-dire qu'ils ne contiennent que des liaisons simples entre atomes de carbone et d'hydrogène. Leur nom dépend du nombre d'atomes de carbone dans la chaîne principale.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Nombre de Carbone & Formule brute & Nom de l'alcane linéaire \\ \hline
+1 & $\mathrm{CH_4}$ & Méthane \\ \hline
+2 & $\mathrm{C_2H_6}$ & Éthane \\ \hline
+3 & $\mathrm{C_3H_8}$ & Propane \\ \hline
+4 & $\mathrm{C_4H_{10}}$ & Butane \\ \hline
+5 & $\mathrm{C_5H_{12}}$ & Pentane \\ \hline
+6 & $\mathrm{C_6H_{14}}$ & Hexane \\ \hline
+7 & $\mathrm{C_7H_{16}}$ & Heptane \\ \hline
+8 & $\mathrm{C_8H_{18}}$ & Octane \\ \hline
+9 & $\mathrm{C_9H_{20}}$ & Nonane \\ \hline
+10 & $\mathrm{C_{10}H_{22}}$ & Décane \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Numérotation des Atomes de Carbone}
+Pour nommer correctement les alcanes ramifiés, il est nécessaire de numéroter les atomes de carbone de la chaîne principale. Voici les règles de base~:
+\begin{itemize}
+    \item Identifier la chaîne carbonée la plus longue.
+    \item Numéroter les atomes de carbone de cette chaîne de manière à ce que les substituants aient les numéros les plus bas possibles.
+\end{itemize}
+
+\subsection{Numérotation des Atomes de Carbone}
+Pour nommer correctement les alcanes ramifiés, il est nécessaire de numéroter les atomes de carbone de la chaîne principale. Voici les règles de base~:
+\begin{itemize}
+    \item Identifier la chaîne carbonée la plus longue.
+    \item Numéroter les atomes de carbone de cette chaîne de manière à ce que les substituants aient les numéros les plus bas possibles.
+\end{itemize}
+
+Exemple: 3-R-heptane (R est ici un Substituant quelconque)
+\begin{center}
+    \chemfig{C_1-C_2-C_3(-[:90]R)-C_4-C_5-C_6-C_7}
+\end{center}
+
+\subsection{Alcanes Ramifiés}
+Les alcanes ramifiés ont des substituants (groupes alkyle) attachés à la chaîne principale. Attention à bien choisir la chaîne la plus longue!
+
+Les substituants sont nommés comme les alcanes, mais en remplaçant \textbf{-ane} par \textbf{-yle}.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Substituant & Formule & Nom \\ \hline
+Méthyle & $\mathrm{CH_3-}$ & Méthyl- \\ \hline
+Éthyle & $\mathrm{C_2H_5-}$ & Éthyl- \\ \hline
+Propyle & $\mathrm{C_3H_7-}$ & Propyl- \\ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Exemples de Nomenclature}
+\begin{itemize}
+    \item \textbf{2-Méthylbutane}~:
+    \begin{center}
+    \chemfig{
+H_3C-[:330,,2]{CH}(-[:270,,,1]CH_3)%
+-[:30]{CH_2}-[:330,,,1]CH_3}
+    
+    \end{center}
+
+    \item \textbf{2,3-Diméthylpentane}~:
+    \begin{center}
+    \chemfig{@C(-[:90]CH_3)-[:30]C(-[:330]CH_3)-[:30]C-[:30]CH_3-[:30]CH_3}
+    \end{center}
+\end{itemize}
+
+\subsection{Groupes Caractéristiques et Fonctions}
+Les groupes caractéristiques déterminent la famille de la molécule organique. Voici quelques exemples de groupes caractéristiques et leurs fonctions associées~:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Groupe Caractéristique & Fonction & Formule Générale \\ \hline
+Groupe hydroxyle —OH & Alcool & R-OH \\ \hline
+Groupe carbonyle —C— & Aldéhyde & R-C-H \\ \hline
+ & Cétone & R1-C-R2 \\ \hline
+Groupe carboxyle —C-OH & Acide Carboxylique & R-C-OH \\ \hline
+Groupe amino —NH2 & Amine & R-NH2 \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Exemples de Noms de Molécules avec Fonctions}
+\begin{itemize}
+    \item \textbf{Propan-2-ol}~:
+    \begin{center}
+    \chemfig{@C(-[:90]OH)-[:30]CH_3-[:330]CH_3}
+    \end{center}
+
+    \item \textbf{Butan-2-one}~:
+    \begin{center}
+    \chemfig{@C(=[:90]O)-[:30]CH_3-[:330]CH_3-[:30]CH_3}
+    \end{center}
+\end{itemize}
+
+\subsection{Exercices}
+\begin{enumerate}
+    \item Nommez les molécules suivantes~:
+    \begin{itemize}
+        \item \chemfig{@C(-[:90]CH_3)-[:30]CH_2-[:30]CH_2-[:30]CH_3}
+        \item \chemfig{@C(-[:90]CH_3)-[:30]C(-[:330]CH_3)-[:30]CH_3}
+    \end{itemize}
+
+    \item Dessinez les formules développées des molécules suivantes~:
+    \begin{itemize}
+        \item 2,2-Diméthylbutane
+        \item 3-Éthylhexane
+    \end{itemize}
+\end{enumerate}
+
+
+\end{document}
