@@ -1,11 +1,11 @@
-TEXFILES = tp1.pdf tp2.pdf exo1.pdf
+TEXFILES = tp1.pdf tp2.pdf exo1.pdf exo_redox1.pdf
 
 .PHONY: all clean view
 
 all: $(TEXFILES)
 
 %.pdf: %.tex
-	pdflatex $<
+	pdflatex -interaction=nonstopmode $<
 
 clean:
 	rm -f *.aux *.log *.pdf
