@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[a4paper, hmargin={4cm,2cm}, vmargin={3cm,3cm}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Rappel sur la résolution des équations du premier et du second degré}
+\author{Yannick Patois}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Équations du premier degré}
+
+Une équation du premier degré est une équation de la forme :
+$$ ax + b = 0 $$
+où $a$ et $b$ sont des nombres réels, avec $a \neq 0$.
+
+\subsection{Résolution}
+
+Pour résoudre une équation du premier degré, on isole $x$ :
+$$ ax + b = 0 \implies ax = -b \implies x = -\frac{b}{a} $$
+
+\subsection{Exemple numérique}
+
+Résolvons l'équation suivante :
+$$ 3x + 5 = 0 $$
+En appliquant la méthode :
+$$ 3x = -5 \implies x = -\frac{5}{3} $$
+La solution est donc :
+$$ \boxed{x = -\frac{5}{3}} $$
+
+\section{Équations du second degré}
+
+Une équation du second degré est une équation de la forme :
+$$ ax^2 + bx + c = 0 $$
+où $a$, $b$ et $c$ sont des nombres réels, avec $a \neq 0$.
+
+\subsection{Résolution}
+
+La résolution d'une équation du second degré repose sur le calcul du discriminant $\Delta$ :
+$$ \Delta = b^2 - 4ac $$
+
+Selon la valeur de $\Delta$, les solutions sont :
+\begin{itemize}
+    \item Si $\Delta > 0$ : deux solutions réelles distinctes,
+    $$ x_1 = \frac{-b - \sqrt{\Delta}}{2a}, \quad x_2 = \frac{-b + \sqrt{\Delta}}{2a} $$
+    \item Si $\Delta = 0$ : une solution réelle double,
+    $$ x = -\frac{b}{2a} $$
+    \item Si $\Delta < 0$ : pas de solution réelle (solutions complexes).
+\end{itemize}
+
+\subsection{Exemples numériques}
+
+\textbf{Exemple 1 : Discriminant strictement positif}
+
+Résolvons l'équation :
+$$ x^2 - 5x + 6 = 0 $$
+Calcul du discriminant :
+$$ \Delta = (-5)^2 - 4 \times 1 \times 6 = 25 - 24 = 1 > 0 $$
+Les solutions sont :
+$$ x_1 = \frac{5 - \sqrt{1}}{2} = 2, \quad x_2 = \frac{5 + \sqrt{1}}{2} = 3 $$
+Les solutions sont donc :
+$$ \boxed{x_1 = 2} \quad \text{et} \quad \boxed{x_2 = 3} $$
+
+\textbf{Exemple 2 : Discriminant nul}
+
+Résolvons l'équation :
+$$ x^2 - 4x + 4 = 0 $$
+Calcul du discriminant :
+$$ \Delta = (-4)^2 - 4 \times 1 \times 4 = 16 - 16 = 0 $$
+La solution est :
+$$ x = -\frac{-4}{2} = 2 $$
+La solution est donc :
+$$ \boxed{x = 2} $$
+
+\textbf{Exemple 3 : Discriminant strictement négatif}
+
+Considérons l'équation :
+$$ x^2 + x + 1 = 0 $$
+Calcul du discriminant :
+$$ \Delta = 1^2 - 4 \times 1 \times 1 = 1 - 4 = -3 < 0 $$
+Il n'y a pas de solution réelle. Les solutions complexes sont :
+$$ x_1 = \frac{-1 - i\sqrt{3}}{2}, \quad x_2 = \frac{-1 + i\sqrt{3}}{2} $$
+
+\end{document}
