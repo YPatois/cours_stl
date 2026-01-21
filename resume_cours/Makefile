@@ -12,7 +12,7 @@ all: $(TEXFILES)
 	pdflatex -interaction=nonstopmode $<
 
 clean:
-	rm -f *.aux *.log *.pdf
+	rm -f *.aux *.log *.pdf *.out
 
 view: all
 	@for file in $(TEXFILES); do \
