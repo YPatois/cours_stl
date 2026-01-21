@@ -1,13 +1,15 @@
-TEXFILES := 01_quelques_bases.tex \
-			02_lewis.tex \
-			03_vsepr.tex \
-			04_stereochimie.tex \
-			05_acide_base.tex
+TEXFILES := 01_quelques_bases.pdf \
+			02_lewis.pdf \
+			03_vsepr.pdf \
+			04_nomenclature.pdf \
+			05_stereochimie.pdf \
+			06_acide_base.pdf \
+			07_equations_premier_second_degre.pdf \
 
-all: $(TEXFILES:.tex=.pdf)
+all: $(TEXFILES)
 
-%.pdf: %.tex $(DEPS)
-	pdflatex $<
+%.pdf: %.tex
+	pdflatex -interaction=nonstopmode $<
 
 clean:
 	rm -f *.aux *.log *.pdf
