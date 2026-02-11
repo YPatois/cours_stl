@@ -6,6 +6,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
+\newcommand{\correction}[1]{\textcolor{red}{#1}}
+
 \begin{document}
 
 \section*{Fiche d'exercices -- séquence n°3~: Réactions d'oxydo-réduction}
@@ -62,6 +64,30 @@
     \end{itemize}
     \textcolor{red}{Une réaction avec un transfert d'électrons est une oxydo-réduction.}
     \textcolor{red}{Une réaction d'oxydo-réduction implique un transfert d'électrons entre un oxydant et un réducteur.}
+
+
+    \item L'équation $\ce{Cu^{2+}(aq) + 2 e- -> Cu(s)}$ correspond à~:
+    \begin{itemize}
+        \item[$\square$] une réduction~;
+        \item[$\square$] une oxydo-réduction~;
+        \item[$\square$] une oxydation.
+    \end{itemize}
+    \correction{
+    \textbf{Réponse~: une réduction.}
+    Explication~: Cette demi-équation montre un gain d'électrons par l'ion $\ce{Cu^{2+}}$, qui se transforme en cuivre métallique $\ce{Cu(s)}$. Un gain d'électrons caractérise une réduction.
+    }
+
+    \item L'équation $\ce{Cu^{2+}(aq) + Fe(s) -> Cu(s) + Fe^{2+}(aq)}$ correspond à~:
+    \begin{itemize}
+        \item[$\square$] une réduction~;
+        \item[$\square$] une oxydo-réduction~;
+        \item[$\square$] une oxydation.
+    \end{itemize}
+    \correction{
+    \textbf{Réponse~: une oxydo-réduction.}
+    Explication~: Cette équation implique un transfert d'électrons entre $\ce{Fe(s)}$ (oxydé en $\ce{Fe^{2+}}$) et $\ce{Cu^{2+}(aq)}$ (réduit en $\ce{Cu(s)}$). Un transfert d'électrons caractérise une réaction d'oxydo-réduction.
+    }
+
 \end{enumerate}
 
 \subsection*{EXERCICE 2~: Couples redox}
@@ -69,72 +95,137 @@
 Compléter le tableau ci-dessous et écrire le couple redox correspondant. On donne le nombre d'oxydation de l'élément \ce{H} est de +I.
 
 \begin{center}
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        Formule & n.o & Oxydant ou Réducteur & Couple redox \\
-        \hline
-        \ce{H+} & +I & Oxydant & \ce{H+/H2} \\
-        \hline
-        \ce{H2} & 0 & Réducteur & \ce{H+/H2} \\
-        \hline
-        \ce{I-} & -I & Réducteur & \ce{I2/I-} \\
-        \hline
-        \ce{I2} & 0 & Oxydant & \ce{I2/I-} \\
-        \hline
-        \ce{O2} & 0 & Oxydant & \ce{O2/H2O2} \\
-        \hline
-        \ce{H2O2} & -I & Oxydant/Réducteur & \ce{O2/H2O2} \\
-        \hline
-        \ce{Fe^2+} & +II & Réducteur & \ce{Fe^3+/Fe^2+} \\
-        \hline
-    \end{tabular}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Formule & n.o & Oxydant ou Réducteur & Couple redox \\
+\hline
+\ce{H+} & \correction{+I} & \correction{Oxydant} & \correction{\ce{H+/H2}} \\
+\hline
+\ce{H2} & \correction{0} & \correction{Réducteur} & \correction{\ce{H+/H2}} \\
+\hline
+\ce{I-} & \correction{-I} & \correction{Réducteur} & \correction{\ce{I2/I-}} \\
+\hline
+\ce{I2} & \correction{0} & \correction{Oxydant} & \correction{\ce{I2/I-}} \\
+\hline
+\ce{O2} & \correction{0} & \correction{Oxydant} & \correction{\ce{O2 /H2O2}} \\
+\hline
+\ce{H2O2} & \correction{-I} & \correction{Réducteur} & \correction{\ce{O2 /H2O2}} \\
+\hline
+\ce{Fe^2+} & \correction{+II} & \correction{Oxydant} & \correction{\ce{Fe^2+/Fe}} \\
+\hline
+\ce{Fe} & \correction{0} & \correction{Réducteur} & \correction{\ce{Fe^2+/Fe}} \\
+\hline
+\end{tabular}
 \end{center}
 
-\textcolor{red}{
+\correction{
+Explications :
 \begin{itemize}
-    \item \ce{H+/H2} avec n.o(\ce{H}) = +I et 0
-    \item \ce{I2/I-} avec n.o(\ce{I}) = 0 et -I
-    \item \ce{O2/H2O2} avec n.o(\ce{O}) = 0 et -I
-    \item \ce{Fe^3+/Fe^2+} avec n.o(\ce{Fe}) = +III et +II
-\end{itemize}}
-\textcolor{red}{Les couples redox sont déterminés par les espèces oxydantes et réductrices. L'oxydant est l'espèce qui gagne des électrons, tandis que le réducteur est celle qui en perd.}
+\item \ce{H+} est l'oxydant du couple \ce{H+/H2} avec un nombre d'oxydation de +I, tandis que \ce{H2} est le réducteur avec un nombre d'oxydation de 0.
+\item \ce{I2} est l'oxydant du couple \ce{I2/I-} avec un nombre d'oxydation de 0, tandis que \ce{I-} est le réducteur avec un nombre d'oxydation de -I.
+\item \ce{O2} est l'oxydant du couple \ce{O2 /H2O2} avec un nombre d'oxydation de 0, tandis que \ce{H2O2} est ici le réducteur (il peut jouer le rôle d'oxydant ou de réducteur, dans d'autres couples) avec un nombre d'oxydation de -I.
+\item \ce{Fe^2+} est l'oxydant du couple \ce{Fe^2+/Fe} avec un nombre d'oxydation de +II, tandis que \ce{Fe} est le réducteur avec un nombre d'oxydation de 0.
+\end{itemize}
+}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Formule & n.o & Oxydant ou Réducteur & Couple redox \\
+\hline
+\ce{SO4^{2-}(aq)} & \correction{+VI} & \correction{Oxydant} & \correction{\ce{SO4^{2-}(aq)/SO2(aq)}} \\
+\hline
+\ce{SO2(aq)} & \correction{+IV} & \correction{Réducteur} & \correction{\ce{SO4^{2-}(aq)/SO2(aq)}} \\
+\hline
+\ce{ClO^{-}(aq)} & \correction{+I} & \correction{Oxydant} & \correction{\ce{ClO^{-}(aq)/Cl2(g)}} \\
+\hline
+\ce{Cl2(g)} & \correction{0} & \correction{Oxydant} & \correction{\ce{Cl2(g)/Cl^{-}(aq)}} \\
+\hline
+\ce{Mn^{2+}(aq)} & \correction{+II} & \correction{Réducteur} & \correction{\ce{MnO4^{-}(aq)/Mn^{2+}(aq)}} \\
+\hline
+\ce{MnO4^{-}(aq)} & \correction{+VII} & \correction{Oxydant} & \correction{\ce{MnO4^{-}(aq)/Mn^{2+}(aq)}} \\
+\hline
+\ce{NO2(g)} & \correction{+IV} & \correction{Oxydant} & \correction{\ce{NO3^{-}(aq)/NO2(g)}} \\
+\hline
+\ce{HNO3(aq)} & \correction{+V} & \correction{Oxydant} & \correction{\ce{NO3^{-}(aq)/NO(g)}} \\
+\hline
+\end{tabular}
+\end{center}
+
+\correction{
+Explications~:
+\begin{itemize}
+\item \ce{SO4^{2-}(aq)} a un nombre d'oxydation de +VI pour le soufre et agit comme oxydant dans le couple \ce{SO4^{2-}(aq)/SO2(aq)}.
+\item \ce{SO2(aq)} a un nombre d'oxydation de +IV pour le soufre et agit comme réducteur dans le même couple.
+\item \ce{ClO^{-}(aq)} a un nombre d'oxydation de +I pour le chlore et agit comme oxydant dans le couple \ce{ClO^{-}(aq)/Cl2(g)}.
+\item \ce{Cl2(g)} a un nombre d'oxydation de 0 et agit comme oxydant dans le couple \ce{Cl2(g)/Cl^{-}(aq)}.
+\item \ce{MnO4^{-}(aq)} a un nombre d'oxydation de +VII pour le manganèse et agit comme oxydant dans le couple \ce{MnO4^{-}(aq)/Mn^{2+}(aq)}.
+\item \ce{Mn^{2+}(aq)} a un nombre d'oxydation de +II pour le manganèse et agit comme réducteur dans le même couple.
+\item \ce{NO2(g)} a un nombre d'oxydation de +IV pour l'azote et agit comme oxydant dans le couple \ce{NO3^{-}(aq)/NO2(g)}.
+\item \ce{HNO3(aq)} a un nombre d'oxydation de +V pour l'azote et agit comme oxydant dans le couple \ce{NO3^{-}(aq)/NO(g)}.
+\end{itemize}
+}
 
 \subsection*{EXERCICE 3~: Demi-réactions}
 
 Pour chacun des couples identifiés dans l'exercice 2, écrire l'équation de demi-réaction correspondante. NB~: Certaines réactions se font en milieu acide.
 
 \begin{center}
-    \begin{tabular}{|c|c|}
-        \hline
-        Couple redox & Demi-réaction \\
-        \hline
-        \ce{H+/H2} & \ce{2 H+ + 2 e- -> H2} \\
-        \hline
-        \ce{I2/I-} & \ce{I2 + 2 e- -> 2 I-} \\
-        \hline
-        \ce{O2/H2O2} & \ce{O2 + 2 H+ + 2 e- -> H2O2} \\
-        \hline
-        \ce{Fe^3+/Fe^2+} & \ce{Fe^3+ + e- -> Fe^2+} \\
-        \hline
-    \end{tabular}
+\begin{tabular}{|c|c|}
+\hline
+Couple redox & Demi-réaction \\
+\hline
+\ce{H+/H2} & \correction{$\ce{2 H+ + 2 e- -> H2}$} \\
+\hline
+\ce{I2/I-} & \correction{$\ce{I2 + 2 e- -> 2 I-}$} \\
+\hline
+\ce{O2/H2O2} & \correction{$\ce{O2 + 2 H+ + 2 e- -> H2O2}$} \\
+\hline
+\ce{Fe^2+/Fe} & \correction{$\ce{Fe^2+ + 2 e- -> Fe}$} \\
+\hline
+\ce{SO4^{2-}/SO2} & \correction{$\ce{SO4^{2-} + 4 H+ + 2 e- -> SO2 + 2 H2O}$} \\
+\hline
+\ce{ClO-/Cl2} & \correction{$\ce{2 ClO- + 4 H+ + 2 e- -> Cl2 + 2 H2O}$} \\
+\hline
+\ce{Cl2/Cl-} & \correction{$\ce{Cl2 + 2 e- -> 2 Cl-}$} \\
+\hline
+\ce{MnO4-/Mn^2+} & \correction{$\ce{MnO4- + 8 H+ + 5 e- -> Mn^2+ + 4 H2O}$} \\
+\hline
+\ce{NO3-/NO2} & \correction{$\ce{NO3- + 2 H+ + e- -> NO2 + H2O}$} \\
+\hline
+\ce{NO3-/NO} & \correction{$\ce{NO3- + 4 H+ + 3 e- -> NO + 2 H2O}$} \\
+\hline
+\end{tabular}
 \end{center}
 
+\correction{
+    Pour écrire une demi-équation redox :
+    \begin{itemize}
+        \item Écrire les espèces oxydante et réductrice du couple.
+        \item Équilibrer les atomes autres que H et O.
+        \item Équilibrer les atomes d'oxygène en ajoutant des molécules d'eau.
+        \item Équilibrer les atomes d'hydrogène en ajoutant des ions H$^+$ (en milieu acide).
+        \item Équilibrer les charges en ajoutant des électrons.
+    \end{itemize}
+}
 
 \subsection*{EXERCICE 4~: Réaction entre les ions or (III) et le zinc}
 
 Les ions or (III) réagissent avec le métal zinc pour donner un dépôt d'or métallique et des ions zinc (II). Les deux couples mis en jeu sont~: \ce{Au^3+/Au} et \ce{Zn^2+/Zn}.
 
 \begin{enumerate}
-    \item En déduire la position des deux couples sur une échelle de potentiel. \\
-    \textcolor{red}{Le couple \ce{Au^3+/Au} a un potentiel standard plus élevé que \ce{Zn^2+/Zn}.}
-    \textcolor{red}{L'or est un oxydant plus fort que le zinc, donc son potentiel standard est plus élevé.}
-
+    \item En déduire la position des deux couples sur une échelle de potentiel.\\
+    \correction{
+    Réponse~: Le couple \ce{Au^3+/Au} a un potentiel standard plus élevé que le couple \ce{Zn^2+/Zn}.\\
+    Explication~: Dans la réaction donnée, l'ion \ce{Au^3+} est réduit en \ce{Au(s)}, ce qui signifie que \ce{Au^3+} est l'oxydant. Le zinc \ce{Zn(s)} est oxydé en \ce{Zn^2+}, ce qui signifie que \ce{Zn(s)} est le réducteur. Comme la réaction se produit spontanément dans ce sens, le couple \ce{Au^3+/Au} doit avoir un potentiel standard plus élevé que le couple \ce{Zn^2+/Zn}.
+    }
     \item Écrire les deux équations de demi-réaction correspondantes en identifiant l'oxydation et la réduction. \\
-    \begin{itemize}
-        \item Réduction~: \ce{Au^3+ + 3 e- -> Au}
-        \item Oxydation~: \ce{Zn -> Zn^2+ + 2 e-}
-    \end{itemize}
-
+    \correction{
+        \begin{itemize}
+            \item Réduction~: \ce{Au^3+ + 3 e- -> Au}
+            \item Oxydation~: \ce{Zn -> Zn^2+ + 2 e-}
+        \end{itemize}
+    }
     \item Écrire alors l'équation de la réaction d'oxydo-réduction correspondante. \\
     \textcolor{red}{\ce{2 Au^3+ + 3 Zn -> 2 Au + 3 Zn^2+}}
     \textcolor{red}{L'équation est équilibrée en électrons et en masse.}
@@ -157,4 +248,56 @@ On verse une solution de sulfate de cuivre (II) dans un erlenmeyer. On ajoute de
     \item Déterminer l'entité chimique qui subit l'oxydation et celle qui subit la réduction. \\
     \textcolor{red}{Le zinc subit l'oxydation et le cuivre subit la réduction.}
 \end{enumerate}
+
+\subsection*{EXERCICE 6 : Oxydation des ions fer (II)}
+
+Certaines toxines présentes dans le sang peuvent oxyder les ions fer (II) en ions fer (III) et empêcher la fixation du dioxygène.
+
+\begin{enumerate}
+    \item Déterminer le nombre d'oxydation de l'élément fer dans les deux ions.
+    \correction{
+        \begin{itemize}
+            \item Dans l'ion fer (II) \ce{Fe^2+}, le nombre d'oxydation du fer est \textbf{+II}.
+            \item Dans l'ion fer (III) \ce{Fe^3+}, le nombre d'oxydation du fer est \textbf{+III}.
+        \end{itemize}
+    }
+
+    \item En déduire le couple redox associé.
+    \correction{
+        Le couple redox associé est \ce{Fe^3+/Fe^2+}.
+    }
+
+    \item L'oxydation des ions fer (II) peut aussi être réalisée avec l'ion permanganate \ce{MnO4-}.
+    \begin{enumerate}
+        \item Déterminer le nombre d'oxydation de l'élément manganèse dans \ce{MnO4-} et \ce{Mn^2+}.
+        \correction{
+            \begin{itemize}
+                \item Dans \ce{MnO4-}, le nombre d'oxydation du manganèse est \textbf{+VII}.
+                \item Dans \ce{Mn^2+}, le nombre d'oxydation du manganèse est \textbf{+II}.
+            \end{itemize}
+        }
+
+        \item En déduire le couple redox associé.\\
+        \correction{
+            Le couple redox associé est \ce{MnO4-/Mn^2+}.
+        }
+
+        \item Écrire l'équation de demi-réaction en solution aqueuse du couple avec l'élément fer.\\
+        \correction{
+            \ce{Fe^2+ -> Fe^3+ + e-}
+        }
+
+        \item Écrire l'équation de demi-réaction en milieu acide du couple avec l'élément manganèse.\\
+        \correction{
+            \ce{MnO4- + 8 H+ + 5 e- -> Mn^2+ + 4 H2O}
+        }
+
+        \item En déduire l'équation de réaction d'oxydo-réduction en milieu acide.\\
+        \correction{
+            \ce{MnO4- + 8 H+ + 5 Fe^2+ -> Mn^2+ + 4 H2O + 5 Fe^3+}
+        }
+    \end{enumerate}
+\end{enumerate}
+
+
 \end{document}
