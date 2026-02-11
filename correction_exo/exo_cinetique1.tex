@@ -1,0 +1,256 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{chemfig}
+
+% Définition des couleurs pour les corrections
+\definecolor{correction}{RGB}{255,0,0}
+\newcommand{\correction}[1]{\textcolor{correction}{#1}}
+
+
+\newenvironment{correctionenv}
+{
+    \par\noindent
+    \begin{minipage}{\linewidth}
+    \color{correction}
+}
+{
+    \end{minipage}
+    \par\vspace{2mm}
+}
+
+\DeclareSIUnit{\week}{semaine}
+\DeclareSIUnit{\perweek}{\per\week}
+
+% Titre des sections
+\usepackage{titlesec}
+\titleformat{\section}
+    {\centering\hrule\vspace{2mm}}
+    {\thesection}
+    {1em}
+    {}
+    [\vspace{1mm}\hrule]
+\titleformat{\subsection}
+    {\em}
+    {\thesubsection}
+    {1em}
+    {}
+
+\title{Exercices de cinétique chimique -- Corrigé}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Exercice n°1 : Bac STL 2006 -- Décomposition de l'ion hypochlorite}
+
+\subsection*{Énoncé}
+L’eau de Javel est un antiseptique couramment utilisé. Les solutions d’eau de Javel contiennent, entre autres, des ions hypochlorite $\ce{ClO-}$ responsables des propriétés antiseptiques de l’eau de Javel.
+
+On donne les valeurs des potentiels rédox suivants :
+\begin{itemize}
+    \item \ce{O2 / H2O} : $E_1 = \SI{0,54}{\volt}$
+    \item \ce{ClO- / Cl-} : $E_2 = \SI{1,03}{\volt}$
+\end{itemize}
+
+\begin{enumerate}
+    \item Pour chacun des couples ci-dessous, écrire la demi-équation électronique.
+
+    \correction{
+        \begin{itemize}
+            \item \ce{O2 + 4 H+ + 4 e- -> 2 H2O}
+            \item \ce{2 H2O -> O2 + 4 H+ + 4 e-}
+        \end{itemize}
+    }
+
+    \item Montrer que l’ion hypochlorite peut réagir avec l’eau.
+
+    \correction{
+        L'ion hypochlorite \ce{ClO-} peut réagir avec l'eau car son potentiel rédox est supérieur à celui de l'eau, ce qui permet une réaction de dismutation.
+    }
+
+    \item Montrer que l’équation de la réaction s’écrit : \ce{ClO- -> Cl- + 1/2 O2}.
+
+    \correction{
+        En combinant les demi-équations et en équilibrant les électrons, on obtient : \\
+        \ce{2ClO- + 2H2O +4H+ + 4e- -> 2Cl- + O2 + 2H2O + 4H+}.\\
+        Ce qui se simplifie en \ce{ClO- -> Cl- + 1/2 O2}.
+    }
+\end{enumerate}
+
+\subsection*{2. Étude cinétique de la réaction de décomposition}
+La décomposition de l’ion hypochlorite est lente, de sorte que la concentration de l’ion hypochlorite dans les solutions commerciales d’eau de Javel diminue lentement au cours du temps.
+
+\begin{enumerate}
+    \item Donner l’expression de la vitesse $v$ de disparition de l’ion hypochlorite.
+
+    \correction{
+        La vitesse de disparition de l'ion hypochlorite est donnée par :
+        $$
+        v = -\frac{d[\ce{ClO-}]}{dt}
+        $$
+    }
+
+    \item Calculer, à l’aide du graphique, la valeur de cette vitesse à chacune des dates $t = 0$ semaine et $t = 10$ semaines.
+
+    \correction{
+        \begin{itemize}
+            \item À $t = 0$ semaine, $v = \SI{0,25}{\mole\per\liter\perweek}$.
+            \item À $t = 10$ semaines, $v = \SI{0,0047}{\mole\per\liter\perweek}$.
+        \end{itemize}
+    }
+
+    \item Comment évolue la valeur de la vitesse $v$ au cours du temps ? Quel est le facteur responsable de cette évolution ?
+
+    \correction{
+        La vitesse $v$ diminue au cours du temps car la concentration en $\ce{ClO-}$ diminue, ce qui est typique d'une réaction d'ordre supérieur à 0.
+    }
+
+    \item Ordre de la réaction
+    
+    a. Quelle relation existe-t-il entre la vitesse v et la concentration en ion hypochlorite dans le cas d’une réaction d’ordre 2.
+
+    \correction{
+    Pour une réaction d'ordre 2, la vitesse $v$ est proportionnelle au carré de la concentration du réactif, soit $v = k \cdot [\ce{ClO-}]^2$.
+    }
+
+    b. Montrer que les valeurs données dans le tableau sont en accord avec l’hypothèse d’une réaction de décomposition de l’ion hypochlorite d’ordre deux
+
+    \correction{
+        D'après les données du tableau, on observe que :
+        $$
+        \frac{v_0}{[\ce{ClO-}]_0^2} = \frac{v_1}{[\ce{ClO-}]_1^2} = \SI{0,076}{\liter\per\mole\per\week}
+        $$
+        Cela confirme que la vitesse est bien proportionnelle au carré de la concentration en $\ce{ClO-}$, ce qui est caractéristique d'une réaction d'ordre~2.
+    }
+
+\end{enumerate}
+    
+\subsection*{3. Influence de la température sur la décomposition de l’ion hypochlorite}
+
+\begin{correctionenv}
+    La constante de vitesse $k$ suit la loi d'Arrhenius :
+    $$
+    k = A \cdot e^{-\frac{E_a}{RT}}
+    $$
+    où $A$ est le facteur pré-exponentiel, $E_a$ l'énergie d'activation, $R$ la constante des gaz parfaits, et $T$ la température en kelvins.
+
+    Si la température $T$ augmente, la constante de vitesse $k$ augmente également, car le terme exponentiel $e^{-\frac{E_a}{RT}}$ croît avec $T$.
+
+    Ainsi, la décomposition de l'ion hypochlorite est plus rapide à température élevée :
+    \begin{itemize}
+        \item La courbe 2 représente la décomposition à $\theta = \SI{20}{\celsius}$ (décomposition lente).
+        \item La courbe 3 représente la décomposition à $\theta = \SI{40}{\celsius}$ (décomposition rapide).
+    \end{itemize}
+\end{correctionenv}
+
+\section*{Exercice n°2 : Synthèse de l'ammoniac}
+
+\subsection*{Énoncé}
+On dispose de deux réacteurs, de volume 1 L, contenant un mélange gazeux de dihydrogène $\ce{H2}$ et de diazote $\ce{N2}$ qui viennent d'être préparés. À l'instant $t = 0$, on introduit une quantité de fer solide dans le réacteur n°1. Le réacteur n°2 est laissé tel quel. On chauffe les deux réacteurs à une température élevée, mais identique pour les deux, et on laisse la réaction se dérouler. La température et la pression ne varient pas au cours de l'expérience.
+
+Toutes les cinq minutes, on mesure la quantité de matière restante de $\ce{H2}$ dans les deux réacteurs. La réaction qui a lieu dans les deux réacteurs est la synthèse de l'ammoniac :
+\[
+\ce{N2(g) + 3 H2(g) = 2 NH3(g)}
+\]
+
+Pour cet exercice, on assimilera les quantités de matière de gaz dans un litre à des concentrations et on traitera l'exercice comme un exercice de chimie des solutions. On admet que l'ordre partiel par rapport à $\ce{N2}$ est nul.
+
+On obtient les résultats suivants :
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+$t$ (min) & 0 & 5 & 10 & 15 & 20 & 25 & 30 & 35 \\
+\hline
+Réacteur n°1 : $[\ce{H2}]$ (mol.L$^{-1}$) & 100 & 97.5 & 95 & 92.5 & 90 & 87.5 & 85 & 82.5 \\
+\hline
+Réacteur n°2 : $[\ce{H2}]$ (mol.L$^{-1}$) & 100 & na & na & na & na & na & na & 97 \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Questions}
+\begin{enumerate}
+    \item Pour le réacteur n°1 :
+    \begin{enumerate}
+        \item Représenter l'évolution de $[\ce{H2}]$ en fonction du temps, sur une feuille de papier millimétré.
+
+        \correction{
+            Le graphique est une droite d'équation $[\ce{H2}] = -0.5t + 100$.
+        }
+
+        \item Déterminer la vitesse instantanée de disparition de $\ce{H2}$ à $t = 15$ minutes.
+
+        \correction{
+            La vitesse instantanée de disparition de $\ce{H2}$ à $t = 15$ minutes est donnée par la valeur absolue du coefficient directeur de la tangente à la courbe. Puisque la courbe est une droite, la vitesse est constante et égale à $\SI{0.5}{\mole\per\liter\per\minute}$.
+        }
+
+        \item Déterminer graphiquement l'ordre de cette réaction (il ne peut s'agir que d'une réaction d'ordres 0, 1 ou 2).
+
+        \correction{
+            Puisque la courbe $[\ce{H2}] = f(t)$ est une droite, il s'agit d'une réaction d'ordre 0.
+        }
+
+        \item Déterminer la constante de vitesse de cette réaction chimique ainsi que le temps de demi-réaction par la méthode de votre choix.
+
+        \correction{
+            La constante de vitesse $k$ correspond à la valeur absolue du coefficient directeur de la droite $[\ce{H2}] = f(t)$ pour une réaction d'ordre 0. Donc, $k = \SI{0.5}{\mole\per\liter\per\minute}$.
+            Le temps de demi-réaction $t_{1/2}$ est donné par :
+            \[
+            t_{1/2} = \frac{[\ce{H2}]_0}{2k} = \frac{100}{2 \times 0.5} = \SI{100}{\minute}
+            \]
+        }
+
+        \item Donner la relation exprimant la concentration restante de dihydrogène, $C$, en fonction de la concentration initiale, $C_0$, et du temps écoulé, $t$.
+
+        \correction{
+            La relation est donnée par :
+            \[
+            C = C_0 - kt
+            \]
+            Avec $C_0 = \SI{100}{\mole\per\liter}$ et $k = \SI{0.5}{\mole\per\liter\per\minute}$, on obtient :
+            \[
+            C = 100 - 0.5t
+            \]
+        }
+    \end{enumerate}
+
+    \item Que peut-on dire de l'évolution de la concentration du dihydrogène dans le réacteur n°2 ? Quel est le rôle d'un catalyseur ?
+
+    \correction{
+        L'évolution de la concentration de $\ce{H2}$ dans le réacteur n°2 est très faible. Cela montre que le catalyseur accélère la réaction chimique.
+    }
+
+    \item Sachant que le fer est sous forme solide dans le réacteur n°1, parle-t-on de catalyse homogène ou hétérogène ? Justifier votre réponse.
+
+    \correction{
+        Il s'agit d'une catalyse hétérogène, car les réactifs et le catalyseur ne sont pas dans le même état physique (solide pour le fer et gazeux pour $\ce{H2}$ et $\ce{N2}$).
+    }
+
+    \item Expliquer le principe de fonctionnement du catalyseur, $\ce{Fe}$.
+
+    \correction{
+        Les molécules de gaz s'adsorbent (se fixent) sur le catalyseur, leurs liaisons intramoléculaires s'affaiblissent car les atomes se lient au fer. Les liaisons étant affaiblies, elles peuvent se briser plus facilement, ce qui rend les molécules plus réactives.
+    }
+
+    \item Quel est le rôle du catalyseur sur l'énergie d'activation de cette réaction ?
+
+    \correction{
+        Le catalyseur abaisse l'énergie d'activation de la réaction.
+    }
+\end{enumerate}
+
+
+\end{document}
