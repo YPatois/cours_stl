@@ -1,0 +1,168 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+% Définition des couleurs pour les corrections
+\definecolor{correction}{RGB}{255,0,0}
+\newcommand{\correction}[1]{\textcolor{correction}{#1}}
+
+% --- Début du contenu ---
+\begin{document}
+
+\section*{Activité n°1~: Gestion d'un stock de fruits}
+
+\subsection*{Énoncé}
+Un barman dispose d'une recette pour préparer des Smoothies~: il utilise 2 oranges et 3 bananes pour fabriquer
+une boisson. En prévision d'une forte affluence, il se fait livrer le matin même
+\SI{50}{\kilo\gram} d'oranges et \SI{60}{\kilo\gram} de bananes.
+
+\begin{itemize}
+    \item Masse moyenne d'une orange~: $m_{\text{orange}} = \SI{200}{\gram}$.
+    \item Masse moyenne d'une banane~: $m_{\text{banane}} = \SI{150}{\gram}$.
+\end{itemize}
+
+\subsection*{Questions}
+
+\begin{enumerate}
+    \item Calculer le nombre d'oranges et de bananes disponibles en début de journée.
+    \correction{
+        \begin{itemize}
+            \item Nombre d'oranges~: $n_{\text{oranges}} = \frac{\SI{50000}{\gram}}{\SI{200}{\gram}} = 250$~oranges.
+            \item Nombre de bananes~: $n_{\text{bananes}} = \frac{\SI{60000}{\gram}}{\SI{150}{\gram}} = 400$~bananes.
+        \end{itemize}
+    }
+
+    \item Remplir le tableau suivant correspondant à l'évolution du stock en fonction du nombre de Smoothies vendus.
+ 
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multirow{2}{*}{Recette} & \multicolumn{2}{c|}{Nombre de fruits} & \multirow{2}{*}{Nombre de Smoothies} \\
+    \cline{2-3}
+    & Oranges & Bananes & \\
+    \hline
+    État initial & \correction{250} & \correction{400} & 0 \\
+    \hline
+    Pour $x = 1$ Smoothie & \correction{248} & \correction{397} & 1 \\
+    \hline
+    Pour $x = 2$ Smoothies & \correction{246} & \correction{394} & 2 \\
+    \hline
+    Pour $x$ Smoothies & \correction{250 - 2x} & \correction{400 - 3x} & $x$ \\
+    \hline
+    État final & \correction{$250 - 2x_{\text{max}}$} & \correction{$400 - 3x_{\text{max}}$} & $x_{\text{max}}$ \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    \correction{
+        \begin{itemize}
+            \item Pour $x = 1$ Smoothie~: Oranges~= $250 - 2 = 248$, Bananes~= $400 - 3 = 397$.
+            \item Pour $x = 2$ Smoothies~: Oranges~= $250 - 4 = 246$, Bananes~= $400 - 6 = 394$.
+            \item Pour $x$ Smoothies~: Oranges~= $250 - 2x$, Bananes~= $400 - 3x$.
+        \end{itemize}
+    }
+
+    \item Déterminer le nombre maximal de Smoothies pouvant être fabriqués et justifier.
+    \correction{
+        \begin{itemize}
+            \item Pour les oranges~: $250 - 2x_{\text{max}} = 0 \Rightarrow x_{\text{max}} = \frac{250}{2} = 125$.
+            \item Pour les bananes~: $400 - 3x_{\text{max}} = 0 \Rightarrow x_{\text{max}} = \frac{400}{3} \approx 133,33$.
+            \item Le réactif limitant est l'orange, car $x_{\text{max}} = 125$ est atteint en premier.
+            \item On ne peut donc fabriquer que 125 Smoothies, car il n'y a plus d'oranges au-delà.
+        \end{itemize}
+    }
+\end{enumerate}
+
+\subsection*{Analogie avec le tableau d'avancement}
+Cette activité illustre la notion d'\textbf{avancement} en chimie~:
+\begin{itemize}
+    \item Les fruits représentent les \textbf{réactifs}.
+    \item Les Smoothies représentent les \textbf{produits}.
+    \item Le tableau de suivi des stocks est analogue au \textbf{tableau d'avancement}.
+\end{itemize}
+
+
+\section*{Activité n°2~: Combustion du méthane}
+
+\subsection*{Énoncé}
+On considère la réaction de combustion complète du méthane dans le dioxygène~:\\
+\ce{CH4 + 2 O2 -> CO2 + 2 H2O}
+
+On introduit initialement $n(\ce{CH4}) = \SI{250}{\mole}$ et une quantité suffisante de \ce{O2} ($n(\ce{O2}) = N$).
+
+\subsection*{Questions}
+
+\begin{enumerate}
+    \item Montrer que la quantité de matière de méthane initialement introduite correspond à $\SI{250}{\mole}$.
+
+        \correction{
+            On utilise la relation $n_{\text{gaz}} = \frac{V_{\text{gaz}}}{V_m}$~:
+            \begin{align*}
+                n_{\ce{CH4}} &= \frac{\SI{5,6}{\meter\cubed}}{\SI{22,4}{\liter\per\mole}} \\
+                &= \frac{\SI{5600}{\liter}}{\SI{22,4}{\liter\per\mole}} \\
+                &= \SI{250}{\mole}.
+            \end{align*}
+            La quantité de matière de méthane initialement introduite est donc bien de $\SI{250}{\mole}$.
+        }
+
+
+    \item Compléter le tableau suivant~:
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Equation-bilan : & \ce{CH4} & \ce{O2} & \ce{CO2} & \ce{2 H2O} \\
+        \hline
+        État initial & $250$ & $N$ & $0$ & $0$ \\
+        (x=0) & & & & \\
+        \hline
+        En cours & \correction{$250 - x$} & $N - 2x$ & \correction{$x$} & \correction{$2x$} \\
+        (x quelconque) & & & & \\
+        \hline
+        État final & \correction{$250 - x_{\text{max}}$} & \correction{$N - 2x_{\text{max}}$} & \correction{$x_{\text{max}}$} & \correction{$2x_{\text{max}}$} \\
+        ($x=x_{\text{max}}$) & & & & \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+    \item À partir de la quantité de matière d’eau produite à l’état final, déduire la masse d’eau produite.
+
+    \correction{
+        \begin{itemize}
+            \item Quantité de matière d’eau produite à l’état final : $n(\ce{H2O})_{\text{final}} = \SI{500}{\mole}$.
+            \item Masse molaire de l’eau : $M(\ce{H2O}) = \SI{18}{\gram\per\mole}$.
+            \item Masse d’eau produite :
+            $$
+            m(\ce{H2O}) = n(\ce{H2O}) \times M(\ce{H2O}) = 500 \times 18 = \SI{9000}{\gram} = \SI{9,0}{\kilo\gram}.
+            $$
+        \end{itemize}
+    }
+
+    \item En déduire le volume d’eau que rejette cette chaudière en une journée.
+    \correction{
+        \begin{itemize}
+            \item Masse volumique de l’eau liquide : $\rho(\ce{H2O}) = \SI{1,0}{\kilo\gram\per\liter}$.
+            \item Volume d’eau liquide rejeté :
+            $$
+            V_{\text{liquide}}(\ce{H2O}) = \frac{m(\ce{H2O})}{\rho(\ce{H2O})} = \frac{9,0}{1,0} = \SI{9,0}{\liter}.
+            $$
+            \item Dans une chaudière, l'eau produite par la combustion est généralement évacuée sous forme de vapeur d'eau dans les fumées, initialement très chaudes. La condensation ne se produit que plus tard, éventuellement.
+            \item Volume molaire des gaz à \SI{20}{\celsius} : $V_m = \SI{24,0}{\liter\per\mole}$.
+            \item Quantité de matière d’eau produite : $n(\ce{H2O}) = \SI{500}{\mole}$.
+            \item Volume de vapeur d’eau produit :
+            $$
+            V_{\text{vapeur}}(\ce{H2O}) = n(\ce{H2O}) \times V_m = 500 \times 24,0 = \SI{12000}{\liter} = \SI{12,0}{\meter\cubed}.
+            $$
+        \end{itemize}
+    }
+    
+    \end{enumerate}
+
+
+% --- Fin du contenu ---
+\end{document}
