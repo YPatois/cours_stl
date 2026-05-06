@@ -13,9 +13,11 @@ cat $SCRIPTBASEDIR/watchfiles.txt
 PREV_PID=""
 
 function do_make() {
-    make >& make.ylog
+    /usr/bin/nice -n 19 make  -j4 >& make.ylog
     if [ $? -ne 0 ]; then
-        cat make.ylog
+        #cat make.ylog
+        echo "\n\n\n============ LaTeX Error====================="
+        grep -B2 -A10 "LaTeX Error" make.ylog | head -n 30
     fi
     return 0
 }
@@ -31,7 +33,9 @@ function handle_change() {
     (   
         cd $SCRIPTBASEDIR
         echo "In $SCRIPTBASEDIR making tex files"
-        /usr/bin/nice -n 19 make -j4
+        #/usr/bin/nice -n 19 make -j4
+        #echo "build done"
+        do_make
         echo "build done"
     ) &
     PREV_PID=$!
