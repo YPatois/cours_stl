@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
+\usepackage{tkz-euclide}
+\usepackage{pgfplots}
+
+\usetikzlibrary{intersections,angles,quotes}
+\usepgfplotslibrary{fillbetween}
+
+\begin{document}
+
+\section{Le cercle trigonométrique}
+
+Le cercle trigonométrique est un outil fondamental pour comprendre les fonctions trigonométriques.
+Il s'agit d'un cercle de rayon 1 centré à l'origine d'un repère orthonormé.
+
+\subsection{Définition}
+
+Un cercle trigonométrique est un cercle~:
+\begin{itemize}
+    \item de centre $O$ (l'origine du repère)~;
+    \item de rayon $1$~;
+    \item orienté dans le sens inverse des aiguilles d'une montre (sens trigonométrique).
+\end{itemize}
+
+\subsection{Repérage d'un point sur le cercle}
+
+Tout point $M$ du cercle trigonométrique peut être repéré par un angle $\theta$ (en radians ou en degrés) formé entre l'axe des abscisses et la demi-droite  $[O, M)$.
+
+\begin{center}
+\begin{tikzpicture}[scale=3]
+    %grid lines
+    \draw[
+            step=.5cm,
+            gray,
+            very thin
+            ]
+            (-1.4,-1.4) grid (1.4,1.4);
+    \filldraw[
+                fill=blue!20,
+                draw=red!50
+                ]
+                (0,0) -- (3mm,0mm)
+    arc [
+            start angle=0,
+            end angle=30,
+            radius=3mm]
+            -- cycle;
+    %axes
+    \draw[->] (-1.5,0) -- (1.5,0) coordinate (x axis);
+    \draw[->] (0,-1.5) -- (0,1.5) coordinate (y axis);
+
+    %axes label
+    \node [right]at (1.5,0)(x){$x$};
+    \node [above]at (0,1.5){$y$};
+    %circle
+    \draw (0,0) circle [
+                        radius=1cm
+                        ];
+    %triangle height
+    \draw[
+        very thick,
+        orange
+        ]
+        (30:1cm) -- node[
+                        left=1pt,
+                        fill=white
+                        ]
+                        {$\sin \alpha$} (30:1cm |- x axis);
+    %triangle base
+    \draw[
+            very thick,
+            blue
+            ]
+            (30:1cm |- x axis) -- node[
+                                        below=2pt,
+                                        fill=white
+                                        ]
+                                        {$\cos \alpha$} (0,0);
+    %intersection
+    \path [name path=upward line] (1,0) -- (1,1);
+    \path [name path=sloped line] (0,0) -- (30:1.5cm);
+    \draw [name intersections={of=upward line and sloped line, by=t}]
+            [very thick,red]
+            (1,0) -- node [right=1pt,fill=white]
+            {$\displaystyle \tan \alpha $} (t);
+    \draw (0,0) -- (t);
+
+    %x-ticks
+    \foreach \x/\xtext in {-1,
+                            -0.5/-\frac{1}{2},
+                                            1}
+    \draw (\x cm,1pt) -- (\x cm,-1pt) node[
+                                            anchor=north,
+                                            fill=white
+                                            ]
+                                            {$\xtext$};
+    %y-ticks
+    \foreach \y/\ytext in {-1,
+                            -0.5/-\frac{1}{2},
+                                0.5/\frac{1}{2},
+                           1}
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[
+                                            anchor=east,
+                                            fill=white
+                                            ]
+                                            {$\ytext$};
+    %arc angle
+    \draw (x) coordinate (A)--
+            (0,0) coordinate (B)--
+                (t) coordinate (C)
+    pic [
+            draw,
+            red,
+            "$\alpha$",
+            angle radius=9mm
+            ]
+            {angle};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Coordonnées d'un point}
+Pour un point $M$ repéré par un angle $\theta$, ses coordonnées $(x, y)$ sont données par~:
+\[
+x = \cos(\theta) \quad \text{et} \quad y = \sin(\theta)
+\]
+
+
+\section{Fonctions trigonométriques de base}
+
+Les fonctions trigonométriques permettent de relier les angles d'un triangle rectangle à ses côtés.
+
+\subsection{Fonctions sinus, cosinus et tangente}
+Soit un triangle rectangle avec un angle $\theta$ (autre que l'angle droit)~:
+\begin{itemize}
+    \item $\sin(\theta) = \frac{\text{côté opposé}}{\text{hypoténuse}}$
+    \item $\cos(\theta) = \frac{\text{côté adjacent}}{\text{hypoténuse}}$
+    \item $\tan(\theta) = \frac{\text{côté opposé}}{\text{côté adjacent}} = \frac{\sin(\theta)}{\cos(\theta)}$
+\end{itemize}
+
+
+\subsection{Fonctions réciproques}
+Les fonctions réciproques permettent de retrouver l'angle $\theta$ à partir de la valeur de la fonction trigonométrique~:
+\begin{itemize}
+    \item $\arcsin(x)$~: angle dont le sinus est  x
+    \item $\arccos(x)$~: angle dont le cosinus est  x
+    \item $\arctan(x)$~: angle dont la tangente est  x
+\end{itemize}
+
+\smallskip
+\textbf{Exemple}~:
+Si \sin(\theta) = 0{,}5, alors \theta = \arcsin(0{,}5) = \frac{\pi}{6} (ou \SI{30}{\degree}).
+
+\end{document}
