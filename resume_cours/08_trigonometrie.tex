@@ -60,6 +60,9 @@ Tout point $M$ du cercle trigonométrique peut être repéré par un angle $\the
     \draw (0,0) circle [
                         radius=1cm
                         ];
+    % Point M on the circle at angle alpha (30 degrees)
+    \coordinate (M) at (30:1cm);
+    \filldraw (M) circle (0.4pt) node[above left, inner sep=1pt] {$M$};
     %triangle height
     \draw[
         very thick,
@@ -101,7 +104,7 @@ Tout point $M$ du cercle trigonométrique peut être repéré par un angle $\the
     %y-ticks
     \foreach \y/\ytext in {-1,
                             -0.5/-\frac{1}{2},
-                                0.5/\frac{1}{2},
+                            0.5/\frac{1}{2},
                            1}
     \draw (1pt,\y cm) -- (-1pt,\y cm) node[
                                             anchor=east,
@@ -123,7 +126,7 @@ Tout point $M$ du cercle trigonométrique peut être repéré par un angle $\the
 \end{center}
 
 \subsection{Coordonnées d'un point}
-Pour un point $M$ repéré par un angle $\theta$, ses coordonnées $(x, y)$ sont données par~:
+Pour un point $M$ sur le cercle trigonométrique, repéré par un angle $\theta$, ses coordonnées $(x, y)$ sont données par~:
 \[
 x = \cos(\theta) \quad \text{et} \quad y = \sin(\theta)
 \]
